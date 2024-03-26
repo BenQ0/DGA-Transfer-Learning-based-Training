@@ -40,7 +40,7 @@ With this change in design, the authors show that increasing the cardinality (nu
 
 <figure>
 <center>
-<p allign="middle">
+<p align="middle">
   <img src="figures/ResNeXt-detailed_a.png" width="350" />
   <img src="figures/ResNeXt-grouped-conv_b.png" width="200" /> 
 </p>
@@ -93,7 +93,7 @@ Afterwards, the processed [CLS] token is extracted and fed into a classification
 
 <figure>
 <center>
-<p allign="middle">
+<p align="middle">
   <img src="figures/Transformer-encoder-block_a.png" width="240" />
   <img src="figures/Transformer-overview_b.png" width="310" /> 
 </p>
@@ -116,7 +116,7 @@ Thereby, the authors are able to take advantages of both Transformer and RNN mod
 
 <figure>
 <center>
-<p allign="middle">
+<p align="middle">
   <img src="figures/RWKV-RNN-Block_a.png" width="200" />
   <img src="figures/RWKV-parrallel_vs_RNN_b.png" width="350" /> 
 </p>
