@@ -1,5 +1,3 @@
-<div class="container">
-
 # A Transfer Learning-based Training Approach for DGA Classification
 
 This is the accompanying repository of the submitted short-paper: "A Transfer Learning-based Training Approach for DGA Classification".
@@ -42,14 +40,14 @@ With this change in design, the authors show that increasing the cardinality (nu
 
 <figure>
 <center>
-  <p float="left">
-  <img src="figures/ResNeXt-detailed_a.png" style="width:541px"> <img src="figures/ResNeXt-grouped-conv_b.png" style="width:236px"> <br>
-  </p>
-  <br>
-  <figcaption>Fig.1: Schematic of a ResNeXt block: (a) Demonstrates the meaning of the cardinality <b>C</b> and the width <b>f<sub>G</sub></b> of each path.
+<p allign="middle">
+  <img src="figures/ResNeXt-detailed_a.png" width="350" />
+  <img src="figures/ResNeXt-grouped-conv_b.png" width="200" /> 
+</p>
+<figcaption>Fig.1: Schematic of a ResNeXt block: (a) Demonstrates the meaning of the cardinality <b>C</b> and the width <b>f<sub>G</sub></b> of each path.
               In (b) a grouped convolutional layer is used instead. Both (a) and (b) are equivalent.</figcaption>
 </center>
-</figure> 
+</figure>
 
 For DGA classification, we replace the 2D-convolutional layers with their 1D counterparts and arrange the the ResNeXt blocks similar to the architectures of the state-of-the-art B-/M-ResNet model [1].
 The actual model layout, however, is optimized during a hyperparameter optimization.
@@ -65,7 +63,7 @@ Further, they replace the batch normalization by a layer normalization (LN) and 
 <figure>
 <center>
   <p align="middle">
-  <img src="figures/ConvNeXt.png" style="width:236px">
+  <img src="figures/ConvNeXt.png", width=200>
   </p>
   <figcaption>Fig.2: Schematic of a ConvNeXt block.</figcaption>
 </center>
@@ -95,14 +93,13 @@ Afterwards, the processed [CLS] token is extracted and fed into a classification
 
 <figure>
 <center>
-  <p float="left">
-  <img src="figures/Transformer-encoder-block_a.png" style="width:308px"> <img src="figures/Transformer-overview_b.png" style="width:478px"> <br>
-  </p>
-  <br>
-  <figcaption>Fig.3: Transformer Encoder block (a) and their use inside a BERT-similar classifier for DGA classification (b).</figcaption>
+<p allign="middle">
+  <img src="figures/Transformer-encoder-block_a.png" width="240" />
+  <img src="figures/Transformer-overview_b.png" width="310" /> 
+</p>
+<figcaption>Fig.3: Transformer Encoder block (a) and their use inside a BERT-similar classifier for DGA classification (b).</figcaption>
 </center>
-</figure> 
-
+</figure>
 
 This technique can be applied to DGA classification where the Transformer-based classifier receives the domain name characters as an input, applies positional encoding and embeds the characters.
 After processing by the Transformer Encoder, the extracted [CLS] token is also classified by a Multi-Level-Perceptron (MLP) layer which outputs either a single probability for the binary case using a sigmoid activation function or the result of a multinomial logistic regression in the multiclass setting by using a softmax activation function.
@@ -119,10 +116,10 @@ Thereby, the authors are able to take advantages of both Transformer and RNN mod
 
 <figure>
 <center>
-  <p float="left">
-  <img src="figures/RWKV-RNN-Block_a.png" style="width:272px"> <img src="figures/RWKV-parrallel_vs_RNN_b.png" style="width:514px"> <br>
-  </p>
-  <br>
+<p allign="middle">
+  <img src="figures/RWKV-RNN-Block_a.png" width="200" />
+  <img src="figures/RWKV-parrallel_vs_RNN_b.png" width="350" /> 
+</p>
   <figcaption>Fig.4: Schematic of a RWKV recurrent block and the use in a parallel and recurrent RWKV model: 
               (a) RWKV Block in a recurrent configuration. The right angled arrows depict the recurrent data flow.
               (b) Top figure shows a parallel RWKV model. For DGA classification, the context of all characters is required thus real parallelization cannot be used here.
@@ -194,5 +191,3 @@ https://doi.org/10.48550/arXiv.2305.13048.
 Wide Residual Networks  <br />
 <i>arXiv e-prints</i>, 2016.  <br />
 https://doi.org/10.48550/arXiv.1605.07146.
-
-</div>
