@@ -1,6 +1,6 @@
 # A Transfer Learning-based Training Approach for DGA Classification
 
-This is the accompanying repository of the submitted short-paper: "A Transfer Learning-based Training Approach for DGA Classification".
+This is cloned repository of the submitted short-paper: "A Transfer Learning-based Training Approach for DGA Classification". [Original repository](https://gitlab.com/rwth-itsec/dga-transfer-learning-based-training)
 
 The repository contains the code for the TL-based training procedure and the four novel optimized models for both the binary and multiclass classification task. <br />
 Additionally, we provide the code of the compared state-of-the-art model [1] based on ResNet and added training demonstration scripts to encourage replication studies and facilitate future work. <br> 
